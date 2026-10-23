@@ -432,13 +432,38 @@ The Power BI file connected directly to the MySQL Data Warehouse is located at [
 
 ## 18. Setup, Execution, and Reproduction Instructions (Section 23)
 
-### Option 1: Full Docker & Apache Airflow 3.1.8 Deployment (Recommended)
+## 18. Setup, Configuration, and Reproduction Instructions (Section 23)
+
+### 18.1 Environment & API Configuration (`.env.example` $\rightarrow$ `.env`)
+When cloning the repository, all database and API parameters are configured via `.env` (using [.env.example](.env.example) as a template):
+
+```ini
+# 1. MySQL Data Warehouse Credentials
+DB_USER=root
+DB_PASSWORD=tu_password_seguro_aqui
+DB_HOST=localhost
+DB_PORT=3306
+DB_NAME=dw_calidad_agua_colombia
+
+# 2. Secondary Source Configuration (API Colombia - Open Public REST API, No API Key Required)
+API_COLOMBIA_BASE_URL=https://api-colombia.com/api/v1
+API_TIMEOUT_SECONDS=25
+API_PAGE_SIZE=200
+
+# 3. Reliability Test B Flag (Controlled Critical Quality Failure)
+INJECT_CRITICAL_FAILURE=false
+```
+
+> [!NOTE]
+> **Zero-Friction API Reproducibility:** **API Colombia** (`https://api-colombia.com/api/v1`) is an open public REST API over HTTPS that **does not require a private API Key or registration token**. Anyone who clones this repository and copies `.env.example` to `.env` can immediately execute live HTTP extractions out-of-the-box.
+
+### 18.2 Option 1: Full Docker & Apache Airflow 3.1.8 Deployment (Recommended)
 1. Clone this repository and navigate to the project root:
    ```bash
    git clone https://github.com/Big2Welker/Project2ETLSVG.git
    cd Project2ETLSVG
    ```
-2. Copy `.env.example` to `.env`:
+2. Copy `.env.example` to `.env` (in Windows PowerShell: `Copy-Item .env.example .env`; in Linux/macOS: `cp .env.example .env`):
    ```bash
    cp .env.example .env
    ```
@@ -449,20 +474,24 @@ The Power BI file connected directly to the MySQL Data Warehouse is located at [
 4. Open the **Apache Airflow 3.1.8 Web UI** at `http://localhost:8080` and trigger the DAG `etl_ods6_irca_colombia_delivery2`.
    * Use the interactive parameter dropdown **`test_scenario`** in the Airflow UI to run **`normal_success`** (Test A & Test C) or any of the **`fail_...`** options (Test B Controlled Critical Failure).
 
-### Option 2: Local Python Execution
+### 18.3 Option 2: Local Python Execution
 1. Install dependencies in a Python virtual environment:
    ```bash
    pip install -r requirements.txt
    ```
-2. Run the reproducible Data Profiling script:
+2. *(Optional)* Test standalone programmatic extraction from **API Colombia**:
+   ```bash
+   python src/extract_api.py
+   ```
+3. Run the reproducible Data Profiling script:
    ```bash
    python notebooks/data_profiling.py
    ```
-3. Run the complete Reliability Test Suite (Tests A, B, and C):
+4. Run the complete Reliability Test Suite (Tests A, B, and C):
    ```bash
    python src/main.py
    ```
-4. Execute the analytical SQL queries (R1–R7) against MySQL:
+5. Execute the analytical SQL queries (R1–R7) against MySQL:
    ```bash
    python src/run_analytics.py
    ```

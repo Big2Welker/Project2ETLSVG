@@ -439,36 +439,67 @@ Todos los resultados numéricos provienen directamente de las consultas SQL en [
 
 ## 18. Instrucciones de Configuración, Ejecución y Reproducción (Sección 23)
 
-### Opción 1: Ejecución Local Rápida (Entorno Virtual Python + MySQL Local)
-1. Clonar el repositorio y ubicarse en la raíz del proyecto (`Proyecto2`).
-2. Copiar el archivo de variables de entorno y configurar las credenciales de su servidor MySQL local:
+### 18.1 Configuración de Variables de Entorno y API (`.env.example` $\rightarrow$ `.env`)
+Al clonar el repositorio, toda la configuración de conexión a MySQL y los parámetros operativos de **API Colombia** se gestionan mediante el archivo `.env` (a partir de la plantilla [.env.example](.env.example)):
+
+```ini
+# 1. Credenciales del Data Warehouse (MySQL)
+DB_USER=root
+DB_PASSWORD=tu_password_seguro_aqui
+DB_HOST=localhost
+DB_PORT=3306
+DB_NAME=dw_calidad_agua_colombia
+
+# 2. Configuración de Fuente Secundaria (API Colombia - Pública sin API Key privada)
+API_COLOMBIA_BASE_URL=https://api-colombia.com/api/v1
+API_TIMEOUT_SECONDS=25
+API_PAGE_SIZE=200
+
+# 3. Bandera para activar la Prueba B (Controlled Critical Quality Failure)
+INJECT_CRITICAL_FAILURE=false
+```
+
+> [!NOTE]
+> **Reproducibilidad Inmediata de la API:** **API Colombia** (`https://api-colombia.com/api/v1`) es un servicio REST público sobre HTTPS que **no requiere registro ni clave privada (`API Key`)**. Cualquier evaluador que clone el repositorio y copie `.env.example` a `.env` puede ejecutar la extracción HTTP en vivo de inmediato sin pasos adicionales.
+
+### 18.2 Opción 1: Despliegue Completo con Docker y Apache Airflow 3.1.8 (Recomendado)
+1. Clonar el repositorio y ubicarse en la raíz del proyecto:
+   ```bash
+   git clone https://github.com/Big2Welker/Project2ETLSVG.git
+   cd Project2ETLSVG
+   ```
+2. Copiar la plantilla `.env.example` a `.env` (en Windows PowerShell: `Copy-Item .env.example .env`; en Linux/macOS: `cp .env.example .env`):
    ```bash
    cp .env.example .env
    ```
-3. Instalar dependencias:
+3. Levantar los contenedores (`mysql`, `airflow-init`, `airflow-webserver`, `airflow-scheduler`, `airflow-dag-processor`):
+   ```bash
+   docker compose up -d
+   ```
+4. Acceder a la interfaz web de **Apache Airflow 3.1.8** en `http://localhost:8080` y activar el DAG `etl_ods6_irca_colombia_delivery2`.
+   * Usar el parámetro desplegable **`test_scenario`** en la interfaz de Airflow para ejecutar **`normal_success`** (Pruebas A y C) o cualquiera de las opciones **`fail_...`** (Prueba B de Fallo Crítico Controlado).
+
+### 18.3 Opción 2: Ejecución Local Rápida (Entorno Virtual Python + MySQL Local)
+1. Instalar dependencias:
    ```bash
    pip install -r requirements.txt
    ```
-4. **Ejecutar el Perfilado de Datos reproducible (Sección 7):**
+2. *(Opcional)* Probar únicamente la extracción programática desde **API Colombia**:
+   ```bash
+   python src/extract_api.py
+   ```
+3. **Ejecutar el Perfilado de Datos reproducible (Sección 7):**
    ```bash
    python notebooks/data_profiling.py
    ```
-5. **Ejecutar la Suite Completa del Pipeline y las 3 Pruebas de Confiabilidad (Test A, Test B y Test C):**
+4. **Ejecutar la Suite Completa del Pipeline y las 3 Pruebas de Confiabilidad (Test A, Test B y Test C):**
    ```bash
    python src/main.py
    ```
-6. **Ejecutar las Consultas Analíticas R1–R7 sobre el Data Warehouse MySQL:**
+5. **Ejecutar las Consultas Analíticas R1–R7 sobre el Data Warehouse MySQL:**
    ```bash
    python src/run_analytics.py
    ```
-
-### Opción 2: Despliegue Completo con Docker y Apache Airflow 3.1.8
-1. Asegurarse de tener Docker Desktop activo y ejecutar:
-   ```bash
-   docker-compose up --build -d
-   ```
-2. Acceder a la interfaz web de **Apache Airflow 3.1.8** en `http://localhost:8080` y activar el DAG `etl_ods6_irca_colombia_delivery2`.
-3. Para reproducir el **Test B (Fallo Crítico Controlado)** desde Airflow, definir `INJECT_CRITICAL_FAILURE=true` en el entorno y disparar un nuevo *DAG Run*.
 
 ---
 
