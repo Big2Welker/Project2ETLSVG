@@ -1,0 +1,632 @@
+{
+  "R1_historical_trend": [
+    {
+      "anio": 2007,
+      "municipios_evaluados": 994,
+      "prom_irca_general": "28.20",
+      "prom_irca_urbano": "27.52",
+      "prom_irca_rural": "40.87"
+    },
+    {
+      "anio": 2008,
+      "municipios_evaluados": 1028,
+      "prom_irca_general": "29.41",
+      "prom_irca_urbano": "26.72",
+      "prom_irca_rural": "48.17"
+    },
+    {
+      "anio": 2009,
+      "municipios_evaluados": 1038,
+      "prom_irca_general": "26.33",
+      "prom_irca_urbano": "20.67",
+      "prom_irca_rural": "41.24"
+    },
+    {
+      "anio": 2010,
+      "municipios_evaluados": 1053,
+      "prom_irca_general": "25.69",
+      "prom_irca_urbano": "19.74",
+      "prom_irca_rural": "44.57"
+    },
+    {
+      "anio": 2011,
+      "municipios_evaluados": 1051,
+      "prom_irca_general": "28.11",
+      "prom_irca_urbano": "21.85",
+      "prom_irca_rural": "45.98"
+    },
+    {
+      "anio": 2012,
+      "municipios_evaluados": 1055,
+      "prom_irca_general": "25.64",
+      "prom_irca_urbano": "18.32",
+      "prom_irca_rural": "43.74"
+    },
+    {
+      "anio": 2013,
+      "municipios_evaluados": 1059,
+      "prom_irca_general": "25.05",
+      "prom_irca_urbano": "15.67",
+      "prom_irca_rural": "44.98"
+    },
+    {
+      "anio": 2014,
+      "municipios_evaluados": 1059,
+      "prom_irca_general": "24.10",
+      "prom_irca_urbano": "14.98",
+      "prom_irca_rural": "43.03"
+    },
+    {
+      "anio": 2015,
+      "municipios_evaluados": 1025,
+      "prom_irca_general": "23.49",
+      "prom_irca_urbano": "13.95",
+      "prom_irca_rural": "42.36"
+    },
+    {
+      "anio": 2016,
+      "municipios_evaluados": 1028,
+      "prom_irca_general": "23.86",
+      "prom_irca_urbano": "12.95",
+      "prom_irca_rural": "37.92"
+    },
+    {
+      "anio": 2017,
+      "municipios_evaluados": 1054,
+      "prom_irca_general": "22.99",
+      "prom_irca_urbano": "12.67",
+      "prom_irca_rural": "37.26"
+    },
+    {
+      "anio": 2018,
+      "municipios_evaluados": 1076,
+      "prom_irca_general": "20.58",
+      "prom_irca_urbano": "12.09",
+      "prom_irca_rural": "39.72"
+    },
+    {
+      "anio": 2019,
+      "municipios_evaluados": 1080,
+      "prom_irca_general": "19.77",
+      "prom_irca_urbano": "10.85",
+      "prom_irca_rural": "38.42"
+    },
+    {
+      "anio": 2020,
+      "municipios_evaluados": 1005,
+      "prom_irca_general": "12.38",
+      "prom_irca_urbano": "9.84",
+      "prom_irca_rural": "22.36"
+    },
+    {
+      "anio": 2021,
+      "municipios_evaluados": 1040,
+      "prom_irca_general": "11.54",
+      "prom_irca_urbano": "9.40",
+      "prom_irca_rural": "24.51"
+    },
+    {
+      "anio": 2022,
+      "municipios_evaluados": 961,
+      "prom_irca_general": "12.14",
+      "prom_irca_urbano": "9.44",
+      "prom_irca_rural": "26.67"
+    },
+    {
+      "anio": 2023,
+      "municipios_evaluados": 979,
+      "prom_irca_general": "11.07",
+      "prom_irca_urbano": "8.58",
+      "prom_irca_rural": "25.49"
+    },
+    {
+      "anio": 2024,
+      "municipios_evaluados": 1006,
+      "prom_irca_general": "10.72",
+      "prom_irca_urbano": "8.79",
+      "prom_irca_rural": "22.65"
+    }
+  ],
+  "R2_comparison": {
+    "delivery1_biased_coalesce_zero": [
+      {
+        "departamento": "CHOCÓ",
+        "prom_riesgo_sesgado_entrega1": "25.41"
+      },
+      {
+        "departamento": "CALDAS",
+        "prom_riesgo_sesgado_entrega1": "22.85"
+      },
+      {
+        "departamento": "NARIÑO",
+        "prom_riesgo_sesgado_entrega1": "17.87"
+      },
+      {
+        "departamento": "GUAINÍA",
+        "prom_riesgo_sesgado_entrega1": "16.40"
+      },
+      {
+        "departamento": "RISARALDA",
+        "prom_riesgo_sesgado_entrega1": "15.80"
+      }
+    ],
+    "delivery2_corrected_true_irca": [
+      {
+        "departamento": "CHOCÓ",
+        "region_geografica": "PACÍFICO",
+        "municipios_medidos": 4,
+        "prom_irca_consolidado_real": "50.83",
+        "prom_irca_urbano_real": "50.83",
+        "prom_irca_rural_real": null
+      },
+      {
+        "departamento": "GUAINÍA",
+        "region_geografica": "AMAZONÍA",
+        "municipios_medidos": 1,
+        "prom_irca_consolidado_real": "32.80",
+        "prom_irca_urbano_real": "32.80",
+        "prom_irca_rural_real": null
+      },
+      {
+        "departamento": "CESAR",
+        "region_geografica": "CARIBE",
+        "municipios_medidos": 24,
+        "prom_irca_consolidado_real": "22.09",
+        "prom_irca_urbano_real": "22.50",
+        "prom_irca_rural_real": "23.53"
+      },
+      {
+        "departamento": "NARIÑO",
+        "region_geografica": "PACÍFICO",
+        "municipios_medidos": 45,
+        "prom_irca_consolidado_real": "20.31",
+        "prom_irca_urbano_real": "16.14",
+        "prom_irca_rural_real": "37.41"
+      },
+      {
+        "departamento": "BOLÍVAR",
+        "region_geografica": "CARIBE",
+        "municipios_medidos": 41,
+        "prom_irca_consolidado_real": "19.10",
+        "prom_irca_urbano_real": "19.20",
+        "prom_irca_rural_real": "13.19"
+      }
+    ]
+  },
+  "R3_rural_urban_gap_top": [
+    {
+      "departamento": "CALDAS",
+      "prom_urbano": "12.24",
+      "prom_rural": "69.22",
+      "brecha_departamental": "56.98",
+      "brecha_municipal_pareada": "55.74"
+    },
+    {
+      "departamento": "HUILA",
+      "prom_urbano": "9.21",
+      "prom_rural": "62.03",
+      "brecha_departamental": "52.81",
+      "brecha_municipal_pareada": "52.21"
+    },
+    {
+      "departamento": "VAUPÉS",
+      "prom_urbano": "52.01",
+      "prom_rural": "100.00",
+      "brecha_departamental": "47.99",
+      "brecha_municipal_pareada": "11.30"
+    },
+    {
+      "departamento": "RISARALDA",
+      "prom_urbano": "7.43",
+      "prom_rural": "46.62",
+      "brecha_departamental": "39.18",
+      "brecha_municipal_pareada": "38.74"
+    },
+    {
+      "departamento": "NORTE DE SANTANDER",
+      "prom_urbano": "12.08",
+      "prom_rural": "50.67",
+      "brecha_departamental": "38.59",
+      "brecha_municipal_pareada": "39.50"
+    },
+    {
+      "departamento": "BOYACÁ",
+      "prom_urbano": "11.00",
+      "prom_rural": "46.83",
+      "brecha_departamental": "35.82",
+      "brecha_municipal_pareada": "36.71"
+    },
+    {
+      "departamento": "VALLE DEL CAUCA",
+      "prom_urbano": "5.42",
+      "prom_rural": "37.52",
+      "brecha_departamental": "32.10",
+      "brecha_municipal_pareada": "31.18"
+    },
+    {
+      "departamento": "META",
+      "prom_urbano": "25.58",
+      "prom_rural": "54.76",
+      "brecha_departamental": "29.19",
+      "brecha_municipal_pareada": "23.52"
+    }
+  ],
+  "R4_chronic_high_risk_municipalities_count": 65,
+  "R4_chronic_high_risk_top10": [
+    {
+      "codigo_municipio": "5895",
+      "departamento": "ANTIOQUIA",
+      "municipio": "ZARAGOZA",
+      "region_geografica": "ANDINA",
+      "anios_consecutivos_alto_riesgo": 5,
+      "prom_irca_general_5a": "74.66",
+      "prom_irca_rural_5a": null
+    },
+    {
+      "codigo_municipio": "73622",
+      "departamento": "TOLIMA",
+      "municipio": "RONCESVALLES",
+      "region_geografica": "ANDINA",
+      "anios_consecutivos_alto_riesgo": 5,
+      "prom_irca_general_5a": "72.76",
+      "prom_irca_rural_5a": null
+    },
+    {
+      "codigo_municipio": "20060",
+      "departamento": "CESAR",
+      "municipio": "BOSCONIA",
+      "region_geografica": "CARIBE",
+      "anios_consecutivos_alto_riesgo": 5,
+      "prom_irca_general_5a": "70.80",
+      "prom_irca_rural_5a": "43.20"
+    },
+    {
+      "codigo_municipio": "13440",
+      "departamento": "BOLÍVAR",
+      "municipio": "MARGARITA",
+      "region_geografica": "CARIBE",
+      "anios_consecutivos_alto_riesgo": 5,
+      "prom_irca_general_5a": "70.68",
+      "prom_irca_rural_5a": null
+    },
+    {
+      "codigo_municipio": "44090",
+      "departamento": "LA GUAJIRA",
+      "municipio": "DIBULLA",
+      "region_geografica": "CARIBE",
+      "anios_consecutivos_alto_riesgo": 5,
+      "prom_irca_general_5a": "69.66",
+      "prom_irca_rural_5a": "68.28"
+    },
+    {
+      "codigo_municipio": "73770",
+      "departamento": "TOLIMA",
+      "municipio": "SUÁREZ",
+      "region_geografica": "ANDINA",
+      "anios_consecutivos_alto_riesgo": 5,
+      "prom_irca_general_5a": "68.82",
+      "prom_irca_rural_5a": null
+    },
+    {
+      "codigo_municipio": "13300",
+      "departamento": "BOLÍVAR",
+      "municipio": "HATILLO DE LOBA",
+      "region_geografica": "CARIBE",
+      "anios_consecutivos_alto_riesgo": 5,
+      "prom_irca_general_5a": "68.34",
+      "prom_irca_rural_5a": null
+    },
+    {
+      "codigo_municipio": "52678",
+      "departamento": "NARIÑO",
+      "municipio": "SAMANIEGO",
+      "region_geografica": "PACÍFICO",
+      "anios_consecutivos_alto_riesgo": 5,
+      "prom_irca_general_5a": "68.06",
+      "prom_irca_rural_5a": "69.94"
+    },
+    {
+      "codigo_municipio": "73067",
+      "departamento": "TOLIMA",
+      "municipio": "ATACO",
+      "region_geografica": "ANDINA",
+      "anios_consecutivos_alto_riesgo": 5,
+      "prom_irca_general_5a": "67.46",
+      "prom_irca_rural_5a": null
+    },
+    {
+      "codigo_municipio": "13810",
+      "departamento": "BOLÍVAR",
+      "municipio": "TIQUISIO",
+      "region_geografica": "CARIBE",
+      "anios_consecutivos_alto_riesgo": 5,
+      "prom_irca_general_5a": "67.26",
+      "prom_irca_rural_5a": null
+    }
+  ],
+  "R5_rural_improvement_leaders": [
+    {
+      "departamento": "GUAVIARE",
+      "riesgo_rural_base_2007": "100.00",
+      "riesgo_rural_actual_2024": "12.90",
+      "reduccion_puntos_irca": "-87.10"
+    },
+    {
+      "departamento": "HUILA",
+      "riesgo_rural_base_2007": "67.49",
+      "riesgo_rural_actual_2024": "15.16",
+      "reduccion_puntos_irca": "-52.33"
+    },
+    {
+      "departamento": "META",
+      "riesgo_rural_base_2007": "60.38",
+      "riesgo_rural_actual_2024": "8.64",
+      "reduccion_puntos_irca": "-51.74"
+    },
+    {
+      "departamento": "MAGDALENA",
+      "riesgo_rural_base_2007": "61.86",
+      "riesgo_rural_actual_2024": "11.26",
+      "reduccion_puntos_irca": "-50.60"
+    },
+    {
+      "departamento": "QUINDÍO",
+      "riesgo_rural_base_2007": "47.73",
+      "riesgo_rural_actual_2024": "0.70",
+      "reduccion_puntos_irca": "-47.03"
+    },
+    {
+      "departamento": "PUTUMAYO",
+      "riesgo_rural_base_2007": "59.45",
+      "riesgo_rural_actual_2024": "20.70",
+      "reduccion_puntos_irca": "-38.75"
+    },
+    {
+      "departamento": "VALLE DEL CAUCA",
+      "riesgo_rural_base_2007": "50.43",
+      "riesgo_rural_actual_2024": "14.67",
+      "reduccion_puntos_irca": "-35.76"
+    },
+    {
+      "departamento": "CAUCA",
+      "riesgo_rural_base_2007": "29.62",
+      "riesgo_rural_actual_2024": "7.33",
+      "reduccion_puntos_irca": "-22.29"
+    }
+  ],
+  "R6_demographic_exposure_top10": [
+    {
+      "region_geografica": "CARIBE",
+      "departamento": "BOLÍVAR",
+      "poblacion_departamental_api": 2236603,
+      "densidad_hab_km2_api": "86.10",
+      "total_municipios_evaluados": 41,
+      "municipios_riesgo_medio_o_alto": "18",
+      "pct_municipios_afectados": "43.90",
+      "prom_irca_depto": "19.10",
+      "poblacion_estimada_expuesta_riesgo": "981923"
+    },
+    {
+      "region_geografica": "PACÍFICO",
+      "departamento": "NARIÑO",
+      "poblacion_departamental_api": 1629181,
+      "densidad_hab_km2_api": "48.97",
+      "total_municipios_evaluados": 45,
+      "municipios_riesgo_medio_o_alto": "26",
+      "pct_municipios_afectados": "57.78",
+      "prom_irca_depto": "20.31",
+      "poblacion_estimada_expuesta_riesgo": "941305"
+    },
+    {
+      "region_geografica": "ANDINA",
+      "departamento": "SANTANDER",
+      "poblacion_departamental_api": 2324090,
+      "densidad_hab_km2_api": "76.11",
+      "total_municipios_evaluados": 86,
+      "municipios_riesgo_medio_o_alto": "33",
+      "pct_municipios_afectados": "38.37",
+      "prom_irca_depto": "14.36",
+      "poblacion_estimada_expuesta_riesgo": "891802"
+    },
+    {
+      "region_geografica": "CARIBE",
+      "departamento": "CÓRDOBA",
+      "poblacion_departamental_api": 1856496,
+      "densidad_hab_km2_api": "74.20",
+      "total_municipios_evaluados": 22,
+      "municipios_riesgo_medio_o_alto": "9",
+      "pct_municipios_afectados": "40.91",
+      "prom_irca_depto": "14.20",
+      "poblacion_estimada_expuesta_riesgo": "759476"
+    },
+    {
+      "region_geografica": "ANDINA",
+      "departamento": "ANTIOQUIA",
+      "poblacion_departamental_api": 6887306,
+      "densidad_hab_km2_api": "108.27",
+      "total_municipios_evaluados": 123,
+      "municipios_riesgo_medio_o_alto": "12",
+      "pct_municipios_afectados": "9.76",
+      "prom_irca_depto": "5.79",
+      "poblacion_estimada_expuesta_riesgo": "671932"
+    },
+    {
+      "region_geografica": "CARIBE",
+      "departamento": "SUCRE",
+      "poblacion_departamental_api": 972350,
+      "densidad_hab_km2_api": "89.07",
+      "total_municipios_evaluados": 24,
+      "municipios_riesgo_medio_o_alto": "14",
+      "pct_municipios_afectados": "58.33",
+      "prom_irca_depto": "18.87",
+      "poblacion_estimada_expuesta_riesgo": "567204"
+    },
+    {
+      "region_geografica": "PACÍFICO",
+      "departamento": "VALLE DEL CAUCA",
+      "poblacion_departamental_api": 4589278,
+      "densidad_hab_km2_api": "207.28",
+      "total_municipios_evaluados": 41,
+      "municipios_riesgo_medio_o_alto": "5",
+      "pct_municipios_afectados": "12.20",
+      "prom_irca_depto": "6.67",
+      "poblacion_estimada_expuesta_riesgo": "559668"
+    },
+    {
+      "region_geografica": "CARIBE",
+      "departamento": "CESAR",
+      "poblacion_departamental_api": 1341697,
+      "densidad_hab_km2_api": "58.58",
+      "total_municipios_evaluados": 24,
+      "municipios_riesgo_medio_o_alto": "10",
+      "pct_municipios_afectados": "41.67",
+      "prom_irca_depto": "22.09",
+      "poblacion_estimada_expuesta_riesgo": "559040"
+    },
+    {
+      "region_geografica": "PACÍFICO",
+      "departamento": "CHOCÓ",
+      "poblacion_departamental_api": 553519,
+      "densidad_hab_km2_api": "11.90",
+      "total_municipios_evaluados": 4,
+      "municipios_riesgo_medio_o_alto": "4",
+      "pct_municipios_afectados": "100.00",
+      "prom_irca_depto": "50.83",
+      "poblacion_estimada_expuesta_riesgo": "553519"
+    },
+    {
+      "region_geografica": "ANDINA",
+      "departamento": "TOLIMA",
+      "poblacion_departamental_api": 1346935,
+      "densidad_hab_km2_api": "57.17",
+      "total_municipios_evaluados": 47,
+      "municipios_riesgo_medio_o_alto": "16",
+      "pct_municipios_afectados": "34.04",
+      "prom_irca_depto": "15.97",
+      "poblacion_estimada_expuesta_riesgo": "458531"
+    }
+  ],
+  "R6_total_estimated_exposed_population_2024": 10127121,
+  "R7_indigenous_territories_analysis": {
+    "group_comparison": [
+      {
+        "condicion_territorial": "Con Resguardo Indigena (API)",
+        "cantidad_municipios": 207,
+        "prom_irca_general_historico": "22.91",
+        "prom_irca_rural_historico": "42.14",
+        "prom_irca_general_2024": "10.91",
+        "prom_irca_rural_2024": "21.68"
+      },
+      {
+        "condicion_territorial": "Sin Resguardo Indigena",
+        "cantidad_municipios": 888,
+        "prom_irca_general_historico": "20.92",
+        "prom_irca_rural_historico": "37.31",
+        "prom_irca_general_2024": "10.67",
+        "prom_irca_rural_2024": "22.83"
+      }
+    ],
+    "top10_critical_indigenous_municipalities_2024": [
+      {
+        "codigo_municipio": "5895",
+        "departamento": "ANTIOQUIA",
+        "municipio": "ZARAGOZA",
+        "region_geografica": "ANDINA",
+        "total_resguardos_indigenas": 4,
+        "irca_general_2024": "96.50",
+        "irca_rural_2024": null,
+        "nivel_riesgo_general": "INVIABLE SANITARIAMENTE"
+      },
+      {
+        "codigo_municipio": "27787",
+        "departamento": "CHOCÓ",
+        "municipio": "TADÓ",
+        "region_geografica": "PACÍFICO",
+        "total_resguardos_indigenas": 6,
+        "irca_general_2024": "93.60",
+        "irca_rural_2024": null,
+        "nivel_riesgo_general": "INVIABLE SANITARIAMENTE"
+      },
+      {
+        "codigo_municipio": "73067",
+        "departamento": "TOLIMA",
+        "municipio": "ATACO",
+        "region_geografica": "ANDINA",
+        "total_resguardos_indigenas": 2,
+        "irca_general_2024": "64.60",
+        "irca_rural_2024": null,
+        "nivel_riesgo_general": "RIESGO ALTO"
+      },
+      {
+        "codigo_municipio": "18479",
+        "departamento": "CAQUETÁ",
+        "municipio": "MORELIA",
+        "region_geografica": "AMAZONÍA",
+        "total_resguardos_indigenas": 1,
+        "irca_general_2024": "58.80",
+        "irca_rural_2024": null,
+        "nivel_riesgo_general": "RIESGO ALTO"
+      },
+      {
+        "codigo_municipio": "50573",
+        "departamento": "META",
+        "municipio": "PUERTO LÓPEZ",
+        "region_geografica": "ORINOQUÍA",
+        "total_resguardos_indigenas": 1,
+        "irca_general_2024": "56.60",
+        "irca_rural_2024": null,
+        "nivel_riesgo_general": "RIESGO ALTO"
+      },
+      {
+        "codigo_municipio": "52678",
+        "departamento": "NARIÑO",
+        "municipio": "SAMANIEGO",
+        "region_geografica": "PACÍFICO",
+        "total_resguardos_indigenas": 1,
+        "irca_general_2024": "54.90",
+        "irca_rural_2024": "62.00",
+        "nivel_riesgo_general": "RIESGO ALTO"
+      },
+      {
+        "codigo_municipio": "23807",
+        "departamento": "CÓRDOBA",
+        "municipio": "TIERRALTA",
+        "region_geografica": "CARIBE",
+        "total_resguardos_indigenas": 1,
+        "irca_general_2024": "54.90",
+        "irca_rural_2024": null,
+        "nivel_riesgo_general": "RIESGO ALTO"
+      },
+      {
+        "codigo_municipio": "76126",
+        "departamento": "VALLE DEL CAUCA",
+        "municipio": "CALIMA",
+        "region_geografica": "PACÍFICO",
+        "total_resguardos_indigenas": 1,
+        "irca_general_2024": "50.80",
+        "irca_rural_2024": "50.80",
+        "nivel_riesgo_general": "RIESGO ALTO"
+      },
+      {
+        "codigo_municipio": "27050",
+        "departamento": "CHOCÓ",
+        "municipio": "ATRATO",
+        "region_geografica": "PACÍFICO",
+        "total_resguardos_indigenas": 6,
+        "irca_general_2024": "50.30",
+        "irca_rural_2024": null,
+        "nivel_riesgo_general": "RIESGO ALTO"
+      },
+      {
+        "codigo_municipio": "47058",
+        "departamento": "MAGDALENA",
+        "municipio": "ARIGUANÍ",
+        "region_geografica": "CARIBE",
+        "total_resguardos_indigenas": 1,
+        "irca_general_2024": "42.20",
+        "irca_rural_2024": "7.50",
+        "nivel_riesgo_general": "RIESGO ALTO"
+      }
+    ]
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "gate": "API Raw Validation",
+  "batch_id": "test_B_critical_failure",
+  "evaluated_at_utc": "2026-10-21T14:59:19.298957+00:00",
+  "critical_failures_count": 0,
+  "pipeline_action": "PROCEED_NORMAL",
+  "suites": {
+    "departments": {
+      "suite_name": "suite_api_departments_raw",
+      "evaluated_at_utc": "2026-10-21T14:59:19.226979+00:00",
+      "overall_gx_success": true,
+      "critical_failures_count": 0,
+      "warning_failures_count": 0,
+      "pipeline_action": "PROCEED_NORMAL",
+      "rule_outcomes": [
+        {
+          "rule_id": "DQ_05",
+          "quality_dimension": "Completeness & Contract",
+          "severity": "Critical",
+          "related_requirement": "R6",
+          "description": "El endpoint /Department debe retornar exactamente las 33 unidades departamentales de Colombia (32 deptos + Bogotá).",
+          "expectation_type": "expect_table_row_count_to_be_between",
+          "success": true,
+          "observed_value": 33,
+          "element_count": null,
+          "unexpected_count": null,
+          "unexpected_percent": null
+        },
+        {
+          "rule_id": "DQ_06",
+          "quality_dimension": "Validity & Range",
+          "severity": "Critical",
+          "related_requirement": "R6",
+          "description": "La población departamental (population) en la API no debe ser nula y debe ser estrictamente positiva (> 10,000 hab).",
+          "expectation_type": "expect_column_values_to_be_between",
+          "success": true,
+          "observed_value": null,
+          "element_count": 33,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0
+        },
+        {
+          "rule_id": "DQ_07",
+          "quality_dimension": "Validity & Range",
+          "severity": "Critical",
+          "related_requirement": "R6",
+          "description": "La superficie departamental (surface) en la API debe ser estrictamente positiva (> 10 km2).",
+          "expectation_type": "expect_column_values_to_be_between",
+          "success": true,
+          "observed_value": null,
+          "element_count": 33,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0
+        }
+      ]
+    },
+    "indigenous_reservations": {
+      "suite_name": "suite_api_indigenous_raw",
+      "evaluated_at_utc": "2026-10-21T14:59:19.260517+00:00",
+      "overall_gx_success": true,
+      "critical_failures_count": 0,
+      "warning_failures_count": 0,
+      "pipeline_action": "PROCEED_NORMAL",
+      "rule_outcomes": [
+        {
+          "rule_id": "DQ_08",
+          "quality_dimension": "Completeness & Volume",
+          "severity": "Critical",
+          "related_requirement": "R7",
+          "description": "El endpoint paginado /IndigenousReservation debe retornar al menos 500 resguardos indígenas con cityId no nulo.",
+          "expectation_type": "expect_column_values_to_not_be_null",
+          "success": true,
+          "observed_value": null,
+          "element_count": 829,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0
+        }
+      ]
+    },
+    "cities": {
+      "suite_name": "suite_api_cities_raw",
+      "evaluated_at_utc": "2026-10-21T14:59:19.298938+00:00",
+      "overall_gx_success": true,
+      "critical_failures_count": 0,
+      "warning_failures_count": 0,
+      "pipeline_action": "PROCEED_NORMAL",
+      "rule_outcomes": [
+        {
+          "rule_id": "DQ_09",
+          "quality_dimension": "Completeness (API Limitation)",
+          "severity": "Informational",
+          "related_requirement": "R6, R7",
+          "description": "Monitoreo de completitud de City: el catálogo municipal de API Colombia debe contener al menos 1,100 municipios.",
+          "expectation_type": "expect_table_row_count_to_be_between",
+          "success": true,
+          "observed_value": 1123,
+          "element_count": null,
+          "unexpected_count": null,
+          "unexpected_percent": null
+        }
+      ]
+    }
+  }
+}

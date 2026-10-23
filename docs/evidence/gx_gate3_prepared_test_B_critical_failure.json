@@ -1,0 +1,120 @@
+{
+  "gate": "Prepared Data Validation",
+  "batch_id": "test_B_critical_failure",
+  "evaluated_at_utc": "2026-10-21T14:59:19.726179+00:00",
+  "critical_failures_count": 1,
+  "pipeline_action": "BLOCK_DW_LOAD_CRITICAL_FAILURE",
+  "suites": {
+    "fact_irca": {
+      "suite_name": "suite_prepared_fact_irca",
+      "evaluated_at_utc": "2026-10-21T14:59:19.683900+00:00",
+      "overall_gx_success": false,
+      "critical_failures_count": 1,
+      "warning_failures_count": 0,
+      "pipeline_action": "STOP_BRANCH_CRITICAL_FAILURE",
+      "rule_outcomes": [
+        {
+          "rule_id": "DQ_10",
+          "quality_dimension": "Validity (Range)",
+          "severity": "Critical",
+          "related_requirement": "R1-R7",
+          "description": "Todo valor de irca_general debe estar estrictamente en el rango legal [0.0, 100.0].",
+          "expectation_type": "expect_column_values_to_be_between",
+          "success": false,
+          "observed_value": null,
+          "element_count": 18591,
+          "unexpected_count": 1,
+          "unexpected_percent": 0.005378946802216126
+        },
+        {
+          "rule_id": "DQ_11",
+          "quality_dimension": "Validity (Range)",
+          "severity": "Critical",
+          "related_requirement": "R1, R2, R3",
+          "description": "Todo valor no nulo de irca_urbano debe estar estrictamente entre [0.0, 100.0] (preservando NULLs reales sin imputar 0).",
+          "expectation_type": "expect_column_values_to_be_between",
+          "success": true,
+          "observed_value": null,
+          "element_count": 18591,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0
+        },
+        {
+          "rule_id": "DQ_12",
+          "quality_dimension": "Validity (Range)",
+          "severity": "Critical",
+          "related_requirement": "R1, R3, R4, R5, R7",
+          "description": "Todo valor no nulo de irca_rural debe estar estrictamente entre [0.0, 100.0] (preservando NULLs reales sin imputar 0).",
+          "expectation_type": "expect_column_values_to_be_between",
+          "success": true,
+          "observed_value": null,
+          "element_count": 18591,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0
+        },
+        {
+          "rule_id": "DQ_13",
+          "quality_dimension": "Uniqueness (Fact Grain)",
+          "severity": "Critical",
+          "related_requirement": "R1-R7",
+          "description": "Unicidad estricta del grano compuesto (fk_geografia, fk_tiempo) en Fact_IRCA.",
+          "expectation_type": "expect_compound_columns_to_be_unique",
+          "success": true,
+          "observed_value": null,
+          "element_count": 18591,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0
+        }
+      ]
+    },
+    "dim_geografia": {
+      "suite_name": "suite_prepared_dim_geografia",
+      "evaluated_at_utc": "2026-10-21T14:59:19.726167+00:00",
+      "overall_gx_success": true,
+      "critical_failures_count": 0,
+      "warning_failures_count": 0,
+      "pipeline_action": "PROCEED_NORMAL",
+      "rule_outcomes": [
+        {
+          "rule_id": "DQ_14",
+          "quality_dimension": "Uniqueness (Dimension PK/BK)",
+          "severity": "Critical",
+          "related_requirement": "R1-R7",
+          "description": "La clave sustituta sk_geografia y el código DIVIPOLA codigo_municipio deben ser 100% únicos en Dim_Geografia.",
+          "expectation_type": "expect_column_values_to_be_unique",
+          "success": true,
+          "observed_value": null,
+          "element_count": 1095,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0
+        },
+        {
+          "rule_id": "DQ_15",
+          "quality_dimension": "Consistency (Integration Coverage)",
+          "severity": "Critical",
+          "related_requirement": "R6, R7",
+          "description": "El 100% de los municipios en Dim_Geografia deben haber cruzado exitosamente con la población departamental de API Colombia (> 0).",
+          "expectation_type": "expect_column_values_to_be_between",
+          "success": true,
+          "observed_value": null,
+          "element_count": 1095,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0
+        },
+        {
+          "rule_id": "DQ_16",
+          "quality_dimension": "Validity (Domain)",
+          "severity": "Critical",
+          "related_requirement": "R1-R5",
+          "description": "Ningún registro en Dim_Geografia puede contener el valor agregado '#TODOS'.",
+          "expectation_type": "expect_column_values_to_not_be_in_set",
+          "success": true,
+          "observed_value": null,
+          "element_count": 1095,
+          "unexpected_count": 0,
+          "unexpected_percent": 0.0
+        }
+      ]
+    }
+  }
+}

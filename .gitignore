@@ -1,0 +1,32 @@
+# 1. Secretos y credenciales locales (NUNCA subir a GitHub)
+.env
+
+# 2. Entornos virtuales y cachés de Python
+venv/
+env/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# 3. Logs y artefactos internos de ejecución de Airflow
+logs/
+airflow.db
+airflow.cfg
+webserver_config.py
+
+# 4. Datos generados por el pipeline (El pipeline los genera al correr, no se suben)
+data/prepared/
+data/raw/api/
+data/raw/primary/primary_manifest_*.json
+
+# 5. Archivos de autogeneración del proyecto Power BI (.pbip / carpetas internas)
+# Solo se sube el archivo final .pbix exportado y las capturas de evidencia
+*.pbip
+*.Report/
+*.SemanticModel/
+docs/dashboard/*.pbip
+docs/dashboard/*.Report/
+docs/dashboard/*.SemanticModel/
+src/build_dashboard_pbip.py
+notebooks/build_notebook.py

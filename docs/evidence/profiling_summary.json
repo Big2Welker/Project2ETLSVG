@@ -1,0 +1,88 @@
+{
+  "primary_source_csv": {
+    "total_records": 19160,
+    "aggregated_todos_records": 569,
+    "atomic_municipality_records": 18591,
+    "columns": [
+      "DepartamentoCodigo",
+      "Departamento",
+      "MunicipioCodigo",
+      "Municipio",
+      "Año",
+      "IRCA",
+      "Nivel de riesgo",
+      "IRCAurbano",
+      "Nivel de riesgo urbano",
+      "IRCArural",
+      "Nivel de riesgo rural"
+    ],
+    "year_min": 2007,
+    "year_max": 2024,
+    "nd_counts_in_atomic": {
+      "IRCA": 0,
+      "IRCAurbano": 1264,
+      "IRCArural": 9538
+    },
+    "nd_percentages_in_atomic": {
+      "IRCA": 0.0,
+      "IRCAurbano": 6.8,
+      "IRCArural": 51.3
+    },
+    "single_zone_nd_records_affected_by_zero_coalesce": 8968,
+    "duplicate_candidate_key_municipio_codigo_anio": 0,
+    "duplicate_candidate_key_depto_mpio_anio": 0,
+    "irca_general_range": [
+      0.0,
+      100.0
+    ],
+    "irca_urbano_range": [
+      0.0,
+      100.0
+    ],
+    "irca_rural_range": [
+      0.0,
+      100.0
+    ]
+  },
+  "api_source_colombia": {
+    "departments_count": 33,
+    "regions_count": 6,
+    "departments_population_nulls": 0,
+    "departments_surface_nulls": 0,
+    "cities_total_count": 1123,
+    "cities_with_population_count": 63,
+    "cities_population_null_percentage": 94.39,
+    "indigenous_reservations_count": 829,
+    "indigenous_reservations_columns": [
+      "id",
+      "name",
+      "code",
+      "procedureType",
+      "administrativeActType",
+      "administrativeActNumber",
+      "administrativeActDate",
+      "nativeCommunityId",
+      "nativeCommunity",
+      "deparmentId",
+      "department",
+      "cityId",
+      "city"
+    ],
+    "indigenous_reservations_missing_cityId": 0,
+    "unique_municipalities_with_indigenous_reservations": 232
+  },
+  "cross_source_compatibility": {
+    "csv_unique_departments": 34,
+    "api_unique_departments": 33,
+    "exact_string_department_matches": 31,
+    "normalized_string_department_matches": 31,
+    "unmatched_csv_departments_before_mapping": [
+      "ARCHIPIELAGO DE SAN ANDRES, PROVIDENCIA Y SANTA CATALINA",
+      "BOGOTA, D.C."
+    ],
+    "unmatched_api_departments_before_mapping": [
+      "BOGOTA",
+      "SAN ANDRES Y PROVIDENCIA"
+    ]
+  }
+}

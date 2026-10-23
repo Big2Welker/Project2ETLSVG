@@ -1,0 +1,64 @@
+{
+  "suite_name": "suite_primary_raw",
+  "evaluated_at_utc": "2026-10-21T14:59:19.841881+00:00",
+  "overall_gx_success": true,
+  "critical_failures_count": 0,
+  "warning_failures_count": 0,
+  "pipeline_action": "PROCEED_NORMAL",
+  "rule_outcomes": [
+    {
+      "rule_id": "DQ_01",
+      "quality_dimension": "Completeness & Volume",
+      "severity": "Critical",
+      "related_requirement": "R1-R7",
+      "description": "El lote primario CSV debe contener entre 15,000 y 25,000 registros históricos nacionales.",
+      "expectation_type": "expect_table_row_count_to_be_between",
+      "success": true,
+      "observed_value": 19160,
+      "element_count": null,
+      "unexpected_count": null,
+      "unexpected_percent": null
+    },
+    {
+      "rule_id": "DQ_02",
+      "quality_dimension": "Completeness",
+      "severity": "Critical",
+      "related_requirement": "R1, R2, R4",
+      "description": "Atributos clave de negocio (DepartamentoCodigo, MunicipioCodigo, Año, IRCA) no deben ser nulos en el CSV crudo.",
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "success": true,
+      "observed_value": null,
+      "element_count": 19160,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0
+    },
+    {
+      "rule_id": "DQ_03",
+      "quality_dimension": "Completeness",
+      "severity": "Critical",
+      "related_requirement": "R1-R7",
+      "description": "MunicipioCodigo no debe presentar nulos en el archivo fuente.",
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "success": true,
+      "observed_value": null,
+      "element_count": 19160,
+      "unexpected_count": 0,
+      "unexpected_percent": 0.0
+    },
+    {
+      "rule_id": "DQ_04",
+      "quality_dimension": "Validity (Domain)",
+      "severity": "Warning",
+      "related_requirement": "R1-R5 (Granularidad)",
+      "description": "Advertencia de grano mixto: proporción de filas '#TODOS' (subtotales departamentales) debe ser menor al 5% (mostly >= 0.95 municipios reales).",
+      "expectation_type": "expect_column_values_to_not_be_in_set",
+      "success": true,
+      "observed_value": null,
+      "element_count": 19160,
+      "unexpected_count": 569,
+      "unexpected_percent": 2.9697286012526094
+    }
+  ],
+  "gate": "Primary Source Raw Validation",
+  "batch_id": "test_C_safe_rerun"
+}

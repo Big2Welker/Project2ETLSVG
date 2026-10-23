@@ -1,0 +1,28 @@
+{
+  "batch_id": "test_C_safe_rerun",
+  "loaded_at_utc": "2026-10-21T14:59:22.643322+00:00",
+  "database": "dw_calidad_agua_colombia",
+  "rerun_strategy": "Transactional Delete-and-Reload in FK-safe order with Primary/Unique Key enforcement",
+  "prepared_input_counts": {
+    "dim_tiempo": 18,
+    "dim_geografia": 1095,
+    "fact_irca": 18591
+  },
+  "dw_pre_load_counts": {
+    "dim_tiempo": 18,
+    "dim_geografia": 1095,
+    "fact_irca": 18591
+  },
+  "dw_post_load_counts": {
+    "dim_tiempo": 18,
+    "dim_geografia": 1095,
+    "fact_irca": 18591
+  },
+  "dw_control_metrics": {
+    "avg_irca_general": 21.2646,
+    "avg_irca_urbano_ignoring_nulls": 15.2412,
+    "avg_irca_rural_ignoring_nulls": 38.0794,
+    "preserved_true_nulls_in_irca_rural": 9538
+  },
+  "reconciliation_passed": true
+}

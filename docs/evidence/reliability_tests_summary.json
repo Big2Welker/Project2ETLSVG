@@ -1,0 +1,107 @@
+{
+  "Test_A_Successful_Run": {
+    "batch_id": "test_A_success",
+    "started_at_utc": "2026-10-21T14:59:14.556471+00:00",
+    "inject_critical_failure": false,
+    "task_states": {
+      "extract_primary": "success",
+      "extract_api": "success",
+      "validate_primary_raw": "success",
+      "validate_api_raw": "success",
+      "transform_and_clean_and_integrate": "success",
+      "validate_prepared": "success",
+      "load_dimensional_dw": "success"
+    },
+    "error_message": null,
+    "reconciliation": {
+      "batch_id": "test_A_success",
+      "loaded_at_utc": "2026-10-21T14:59:17.777196+00:00",
+      "database": "dw_calidad_agua_colombia",
+      "rerun_strategy": "Transactional Delete-and-Reload in FK-safe order with Primary/Unique Key enforcement",
+      "prepared_input_counts": {
+        "dim_tiempo": 18,
+        "dim_geografia": 1095,
+        "fact_irca": 18591
+      },
+      "dw_pre_load_counts": {
+        "dim_tiempo": 18,
+        "dim_geografia": 1095,
+        "fact_irca": 18591
+      },
+      "dw_post_load_counts": {
+        "dim_tiempo": 18,
+        "dim_geografia": 1095,
+        "fact_irca": 18591
+      },
+      "dw_control_metrics": {
+        "avg_irca_general": 21.2646,
+        "avg_irca_urbano_ignoring_nulls": 15.2412,
+        "avg_irca_rural_ignoring_nulls": 38.0794,
+        "preserved_true_nulls_in_irca_rural": 9538
+      },
+      "reconciliation_passed": true
+    },
+    "completed_at_utc": "2026-10-21T14:59:17.784272+00:00"
+  },
+  "Test_B_Controlled_Critical_Quality_Failure": {
+    "batch_id": "test_B_critical_failure",
+    "started_at_utc": "2026-10-21T14:59:17.784351+00:00",
+    "inject_critical_failure": true,
+    "task_states": {
+      "extract_primary": "success",
+      "extract_api": "success",
+      "validate_primary_raw": "success",
+      "validate_api_raw": "success",
+      "transform_and_clean_and_integrate": "success",
+      "validate_prepared": "failed",
+      "load_dimensional_dw": "upstream_failed (BLOCKED)"
+    },
+    "error_message": "[GX GATE 3 CRITICAL FAILURE] Se detectaron 1 violaciones críticas en datos preparados. Carga al Data Warehouse BLOQUEADA según política de severidad. Evidencia: c:\\ETL\\ProyectosEtl\\Proyecto2\\docs\\evidence\\gx_gate3_prepared_test_B_critical_failure.json",
+    "reconciliation": null,
+    "completed_at_utc": "2026-10-21T14:59:19.727796+00:00"
+  },
+  "Test_C_Safe_Rerun_And_Repeatability": {
+    "batch_id": "test_C_safe_rerun",
+    "started_at_utc": "2026-10-21T14:59:19.727865+00:00",
+    "inject_critical_failure": false,
+    "task_states": {
+      "extract_primary": "success",
+      "extract_api": "success",
+      "validate_primary_raw": "success",
+      "validate_api_raw": "success",
+      "transform_and_clean_and_integrate": "success",
+      "validate_prepared": "success",
+      "load_dimensional_dw": "success"
+    },
+    "error_message": null,
+    "reconciliation": {
+      "batch_id": "test_C_safe_rerun",
+      "loaded_at_utc": "2026-10-21T14:59:22.643322+00:00",
+      "database": "dw_calidad_agua_colombia",
+      "rerun_strategy": "Transactional Delete-and-Reload in FK-safe order with Primary/Unique Key enforcement",
+      "prepared_input_counts": {
+        "dim_tiempo": 18,
+        "dim_geografia": 1095,
+        "fact_irca": 18591
+      },
+      "dw_pre_load_counts": {
+        "dim_tiempo": 18,
+        "dim_geografia": 1095,
+        "fact_irca": 18591
+      },
+      "dw_post_load_counts": {
+        "dim_tiempo": 18,
+        "dim_geografia": 1095,
+        "fact_irca": 18591
+      },
+      "dw_control_metrics": {
+        "avg_irca_general": 21.2646,
+        "avg_irca_urbano_ignoring_nulls": 15.2412,
+        "avg_irca_rural_ignoring_nulls": 38.0794,
+        "preserved_true_nulls_in_irca_rural": 9538
+      },
+      "reconciliation_passed": true
+    },
+    "completed_at_utc": "2026-10-21T14:59:22.652067+00:00"
+  }
+}
