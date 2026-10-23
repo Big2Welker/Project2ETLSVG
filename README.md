@@ -495,4 +495,4 @@ All evidence artifacts are preserved inside the repository and linked below:
 
 ## 20. Team Members and Responsibilities
 
-* **Sebastián [Last Name]** – *Data Engineer & BI Architect*: System architecture design, programmatic API Colombia extraction, data profiling, Great Expectations 3-gate validation suite, MySQL Star Schema refinement, Apache Airflow 3.1.8 orchestration, and Power BI analytical dashboard (R1–R7).
+* **Sebastián Rojas Herrera, Juan David Bedoya** – *Data Engineer & BI Architect*: System architecture design, programmatic API Colombia extraction, data profiling, Great Expectations 3-gate validation suite, MySQL Star Schema refinement, Apache Airflow 3.1.8 orchestration, and Power BI analytical dashboard (R1–R7).
